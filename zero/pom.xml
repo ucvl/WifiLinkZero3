@@ -3,6 +3,18 @@
   <groupId>ucvl</groupId>
   <artifactId>zero</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/ucvl/WifiLinkZero3</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <name>GitHub Packages Snapshots</name>
+            <url>https://maven.pkg.github.com/ucvl/WifiLinkZero3</url>
+        </snapshotRepository>
+    </distributionManagement>
   <build>
     <plugins>
         <plugin>
