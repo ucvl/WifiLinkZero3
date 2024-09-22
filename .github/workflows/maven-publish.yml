@@ -29,6 +29,6 @@ jobs:
       run: mvn -B package --file zero/pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml --file zero/pom.xml
+    run: mvn -f zero/pom.xml deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
