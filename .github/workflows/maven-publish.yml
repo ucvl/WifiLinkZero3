@@ -25,6 +25,15 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file zero/pom.xml
 
+    - name: List target directory
+      run: ls -la zero/target
+
+    - name: Upload JAR file
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-jar-file
+        path: zero/target/*.jar
+
     - name: Publish to GitHub Packages Apache Maven
       run: mvn -f zero/pom.xml deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
