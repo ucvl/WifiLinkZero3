@@ -9,7 +9,7 @@ public class WL {
         if (version != null) {
             System.out.println("Latest version: " + version);
         } else {
-            System.out.println("Failed to get latest release.");
+            System.out.println("Failed get latest release.");
         }
     }
 
