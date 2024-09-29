@@ -33,11 +33,18 @@
         <version>3.2.0</version>
         <configuration>
           <finalName>${project.artifactId}-${project.version}</finalName>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+              <mainClass>zero.WL</mainClass> <!-- 指定主类 -->
+            </manifest>
+          </archive>
         </configuration>
       </plugin>
     </plugins>
   </build>
-    <dependencies>
+  <dependencies>
     <dependency>
       <groupId>org.json</groupId>
       <artifactId>json</artifactId>
