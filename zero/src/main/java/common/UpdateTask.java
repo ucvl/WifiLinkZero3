@@ -9,7 +9,7 @@ public class UpdateTask implements Runnable {
     private static final String GITHUB_API_URL = "https://api.github.com/repos/ucvl/WifiLinkZero3/releases/latest";
     private static String currentVersion = "1.0.0"; // 假设当前版本为1.0.0
     private static final String USERNAME = "ucvl";
-    private static final String TOKEN = "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";
+    private static final String TOKEN = "";//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
 
     @Override
     public void run() {
