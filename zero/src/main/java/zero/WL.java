@@ -10,7 +10,7 @@ import common.UpdateTask;
 
 public class WL {
    
-    public static void main(String[] args) throws InterruptedException, ExecutionException {
+    public static void main(String[] args)    {
 
         // 主程序逻辑
         while (true) {
