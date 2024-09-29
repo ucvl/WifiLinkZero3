@@ -1,12 +1,6 @@
 package zero;
 
-import java.util.List;
-import java.util.concurrent.ExecutionException;
 
-import common.GetLastVersion;//测试版本获取
-
-import common.NetworkScanner;
-import common.UpdateTask;
 
 public class WL {
 
