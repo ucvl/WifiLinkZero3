@@ -9,7 +9,7 @@ jobs:
 
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
 
     steps:
@@ -37,13 +37,13 @@ jobs:
     - name: List target directory
       run: ls -la zero/target
 
-    - name: Upload JAR file
-      uses: actions/upload-artifact@v4
+    - name: Upload JAR file to GitHub Release
+      uses: ncipollo/release-action@v1
       with:
-        name: zero-latest
-        path: zero/target/*.jar
-
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn -f zero/pom.xml deploy -s $GITHUB_WORKSPACE/settings.xml
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        artifacts: zero/target/*.jar
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.event.release.tag_name }}
+        release_name: ${{ github.event.release.name }}
+        body: "Release of version ${{ github.event.release.tag_name }}"
+        draft: false
+        prerelease: false
