@@ -9,13 +9,14 @@ import common.NetworkScanner;
 import common.UpdateTask;
 
 public class WL {
+
    
     public static void main(String[] args)    {
 
         // 主程序逻辑
         while (true) {
             // 模拟主程序运行
-            System.out.println("Main program running...");
+            System.out.println("Main program running..update.");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -32,7 +33,6 @@ public class WL {
         }
         */
     }
-
 
 
 }
