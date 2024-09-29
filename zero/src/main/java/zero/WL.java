@@ -15,7 +15,6 @@ public class WL {
         Thread updateThread = new Thread(new UpdateTask());
         updateThread.setDaemon(true); // 设置为守护线程
         updateThread.start();
-
         // 主程序逻辑
         while (true) {
             // 模拟主程序运行
