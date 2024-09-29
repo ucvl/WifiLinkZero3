@@ -9,7 +9,6 @@ import common.NetworkScanner;
 import common.UpdateTask;
 
 public class WL {
-
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 
 		// 主程序逻辑
