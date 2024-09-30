@@ -7,8 +7,7 @@ public class WL {
   
     public static void main(String[] args)    {
 
-        // 主程序逻辑
-    	 System.out.println(    GetLastVersion.getLatestVersion());
+     
         while (true) {
             // 模拟主程序运行
             System.out.println("念天地之悠悠，独怆然而涕下！");
