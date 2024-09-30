@@ -4,7 +4,7 @@ import common.GetLastVersion;
 
 public class WL {
 
-   
+  
     public static void main(String[] args)    {
 
         // 主程序逻辑
