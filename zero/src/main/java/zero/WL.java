@@ -10,7 +10,7 @@ public class WL {
         // 主程序逻辑
         while (true) {
             // 模拟主程序运行
-            System.out.println("往事如风！我是爱你的！");
+            System.out.println("往事如风！！");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
