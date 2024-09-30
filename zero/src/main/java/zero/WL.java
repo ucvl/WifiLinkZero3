@@ -1,6 +1,6 @@
 package zero;
 
-
+import common.GetLastVersion;
 
 public class WL {
 
@@ -8,11 +8,13 @@ public class WL {
     public static void main(String[] args)    {
 
         // 主程序逻辑
+    	 System.out.println(    GetLastVersion.getLatestVersion());
         while (true) {
             // 模拟主程序运行
-            System.out.println("往事如风！！");
+            System.out.println("念天地之悠悠，独怆然而涕下！");
             try {
                 Thread.sleep(1000);
+           
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
