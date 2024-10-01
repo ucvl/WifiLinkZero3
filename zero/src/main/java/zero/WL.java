@@ -6,7 +6,6 @@ public class WL {
   
     public static void main(String[] args)    {
 
-     
         while (true) {
             // 模拟主程序运行
             System.out.println("春眠不觉晓，处处闻啼鸟！自动更新后的输出！");
