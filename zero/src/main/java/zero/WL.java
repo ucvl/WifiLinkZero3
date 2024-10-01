@@ -1,6 +1,5 @@
 package zero;
 
-import common.GetLastVersion;
 
 public class WL {
 
@@ -10,9 +9,9 @@ public class WL {
      
         while (true) {
             // 模拟主程序运行
-            System.out.println("念天地之悠悠，独怆然而涕下！");
+            System.out.println("春眠不觉晓，处处闻啼鸟！自动更新后的输出！");
             try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
            
             } catch (InterruptedException e) {
                 e.printStackTrace();
