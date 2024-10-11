@@ -21,7 +21,6 @@ public class WL {
 			System.out.println("ready open serial.............！");
 			try {
 				Thread.sleep(1000);
-
 				try {
 					// 打开串口
 
@@ -45,7 +44,6 @@ public class WL {
 						}
 					}
 				}
-
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
