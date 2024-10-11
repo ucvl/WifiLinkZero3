@@ -1,7 +1,5 @@
 package zero;
-
 import java.io.IOException;
-
 import com.pi4j.io.serial.Baud;
 import com.pi4j.io.serial.DataBits;
 import com.pi4j.io.serial.FlowControl;
@@ -13,8 +11,8 @@ import com.pi4j.io.serial.StopBits;
 
 import common.GetLastVersion;
 
-public class WL {
 
+public class WL {
 	public static void main(String[] args) {
 		final Serial serial = SerialFactory.createInstance();
 
@@ -53,14 +51,8 @@ public class WL {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-
 		}
-		// 替换为你的子网，例如 "172.16"
-		/*
-		 * NetworkScanner scanner = new NetworkScanner("172.16", 100); List<String>
-		 * devices = scanner.scan(); for (String device : devices) {
-		 * System.out.println("设备IP地址: " + device); }
-		 */
 	}
-
 }
+
+
