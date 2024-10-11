@@ -11,11 +11,9 @@ import com.pi4j.io.serial.StopBits;
 
 import common.GetLastVersion;
 
-
 public class WL {
 	public static void main(String[] args) {
 		final Serial serial = SerialFactory.createInstance();
-
 		// 主程序逻辑
 		System.out.println(GetLastVersion.getLatestVersion());
 		while (true) {
