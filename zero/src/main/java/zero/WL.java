@@ -22,7 +22,7 @@ public class WL {
 		System.out.println(GetLastVersion.getLatestVersion());
 		while (true) {
 			// 模拟主程序运行
-			System.out.println("准备开串口！");
+			System.out.println("ready open serial.............！");
 			try {
 				Thread.sleep(1000);
 
