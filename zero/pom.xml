@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ucvl</groupId>
   <artifactId>zero</artifactId>
-  <version>1.0.60</version>
+  <version>1.0.65</version>
   <distributionManagement>
     <repository>
       <id>github</id>
@@ -68,11 +68,17 @@
       </plugin>
     </plugins>
   </build>
-  <dependencies>
+<dependencies>
     <dependency>
-      <groupId>org.json</groupId>
-      <artifactId>json</artifactId>
-      <version>20240303</version>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20240303</version>
     </dependency>
-  </dependencies>
+    <dependency>
+        <groupId>com.pi4j</groupId>
+        <artifactId>pi4j-core</artifactId>
+        <version>1.4</version>
+    </dependency>
+</dependencies>
+
 </project>
