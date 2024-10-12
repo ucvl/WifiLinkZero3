@@ -6,7 +6,7 @@ import com.pi4j.io.serial.FlowControl;
 import com.pi4j.io.serial.Parity;
 import com.pi4j.io.serial.Serial;
 import com.pi4j.io.serial.SerialFactory;
-import com.pi4j.io.serial.SerialPortException;
+
 import com.pi4j.io.serial.StopBits;
 
 import common.GetLastVersion;
@@ -21,34 +21,27 @@ public class WL {
 			System.out.println("ready open serial.............！");
 			try {
 				Thread.sleep(1000);
-				try {
 					// 打开串口
-
 					serial.open("/dev/ttyS5", Baud._19200, DataBits._8, Parity.NONE, StopBits._1, FlowControl.NONE);
-
 					System.out.println("串口已打开");
-
 					// 等待5秒钟
 					Thread.sleep(5000);
-
-				} catch (SerialPortException | InterruptedException | IOException ex) {
-					System.out.println("操作失败: " + ex.getMessage());
-				} finally {
-					// 关闭串口
-					if (serial.isOpen()) {
-						try {
-							serial.close();
-							System.out.println("串口已关闭");
-						} catch (IllegalStateException | IOException ex) {
-							System.out.println("关闭串口失败: " + ex.getMessage());
-						}
-					}
-				}
-			} catch (InterruptedException e) {
+			} catch (InterruptedException | IOException e) {
 				e.printStackTrace();
 			}
+			finally {
+				// 关闭串口
+				if (serial.isOpen()) {
+					try {
+						serial.close();
+						System.out.println("串口已关闭");
+					} catch (IllegalStateException | IOException ex) {
+						System.out.println("关闭串口失败: " + ex.getMessage());
+					}
+				}
 		}
 	}
+}
 }
 
 
