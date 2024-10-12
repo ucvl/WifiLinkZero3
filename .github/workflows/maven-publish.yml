@@ -6,8 +6,8 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       packages: write
@@ -30,8 +30,13 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
+
     - name: Clean and build with Maven
       run: mvn clean package --file zero/pom.xml
+
+    - name: Get project version
+      id: get_version
+      run: echo "::set-output name=VERSION::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout --file zero/pom.xml)"
 
     - name: List target directory
       run: ls -la zero/target
@@ -40,7 +45,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: zero-latest
-        path: zero/target/*.jar
+        path: zero/target/zero-${{ steps.get_version.outputs.VERSION }}-jar-with-dependencies.jar
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn -f zero/pom.xml deploy -s $GITHUB_WORKSPACE/settings.xml
