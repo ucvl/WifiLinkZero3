@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ucvl</groupId>
   <artifactId>zero</artifactId>
-  <version>1.0.88</version>
+  <version>1.0.89</version>
 
   <distributionManagement>
     <repository>
@@ -33,22 +33,18 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.3.0</version>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
         <configuration>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
+          <finalName>${project.artifactId}-${project.version}</finalName>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+              <mainClass>zero.WL</mainClass>
+            </manifest>
+          </archive>
         </configuration>
-        <executions>
-          <execution>
-            <id>make-assembly</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -61,37 +57,12 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <filters>
-                <filter>
-                  <artifact>org.json:json</artifact>
-                  <excludes>
-                    <exclude>**/*.class</exclude>
-                    <exclude>META-INF/maven/org.json/json/pom.properties</exclude>
-                    <exclude>META-INF/maven/org.json/json/pom.xml</exclude>
-                  </excludes>
-                </filter>
-                <filter>
-                  <artifact>com.pi4j:pi4j-core</artifact>
-                  <excludes>
-                    <exclude>**/*.class</exclude>
-                    <exclude>META-INF/maven/com.pi4j/pi4j-core/pom.properties</exclude>
-                    <exclude>META-INF/maven/com.pi4j/pi4j-core/pom.xml</exclude>
-                  </excludes>
-                </filter>
-                <filter>
-                  <artifact>org.slf4j:slf4j-api</artifact>
-                  <excludes>
-                    <exclude>**/*.class</exclude>
-                    <exclude>META-INF/maven/org.slf4j/slf4j-api/pom.properties</exclude>
-                    <exclude>META-INF/maven/org.slf4j/slf4j-api/pom.xml</exclude>
-                  </excludes>
-                </filter>
-              </filters>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <mainClass>zero.WL</mainClass>
                 </transformer>
               </transformers>
+              <finalName>zero-${project.version}</finalName> <!-- 设置最终文件名称 -->
             </configuration>
           </execution>
         </executions>
