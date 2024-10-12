@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ucvl</groupId>
   <artifactId>zero</artifactId>
-  <version>1.0.72</version>
+  <version>1.0.73</version>
 
   <distributionManagement>
     <repository>
@@ -39,7 +39,7 @@
             <manifest>
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
               <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-              <mainClass>zero.WL</mainClass> <!-- 指定主类 -->
+              <mainClass>zero.WL</mainClass>
             </manifest>
           </archive>
         </configuration>
