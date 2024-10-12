@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ucvl</groupId>
   <artifactId>zero</artifactId>
-  <version>1.0.75</version>
+  <version>1.0.76</version>
 
   <distributionManagement>
     <repository>
