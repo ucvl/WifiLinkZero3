@@ -2,13 +2,11 @@ package zero;
 
 
 
-import common.GetLastVersion;
-
 public class WL {
     public static void main(String[] args) throws InterruptedException {
 
         // 主程序逻辑
-        System.out.println(GetLastVersion.getLatestVersion());
+      //  System.out.println(GetLastVersion.getLatestVersion());
 
         while (true) {
             // 模拟主程序运行
