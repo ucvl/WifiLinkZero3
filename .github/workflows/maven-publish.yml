@@ -36,8 +36,7 @@ jobs:
 
     - name: Get project version
       id: get_version
-      run: |
-        echo "VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout --file zero/pom.xml)" >> $GITHUB_ENV
+      run: echo "VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout --file zero/pom.xml)" >> $GITHUB_ENV
 
     - name: List target directory
       run: ls -la zero/target
